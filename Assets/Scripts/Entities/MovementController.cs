@@ -4,13 +4,13 @@ using UnityEngine.UIElements;
 
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Attributes))]
 public class MovementController : MonoBehaviour
 {
 
     public CharacterController CharacterController;
 
-    public float Speed = 12f;
-    public float JumpHeight = 3f;
+    public Attributes Attributes; 
 
     public Vector2 Movement;
     public bool Jump;
@@ -29,6 +29,7 @@ public class MovementController : MonoBehaviour
     void Start()
     {
         CharacterController = GetComponent<CharacterController>();
+        Attributes = GetComponent<Attributes>();
         Movement = Vector2.zero;
         isGrounded = true; 
     }
@@ -41,13 +42,13 @@ public class MovementController : MonoBehaviour
         //move around. 
         Vector3 moveDirection = transform.right * Movement.x + transform.forward * Movement.y;
 
-        CharacterController.Move(moveDirection * Speed * Time.deltaTime);
+        CharacterController.Move(moveDirection * Attributes.Speed * Time.deltaTime);
 
 
         //jumping
         if (Jump && isGrounded)
         {
-            veloctity.y = Mathf.Sqrt(JumpHeight * -2 * Gravity); 
+            veloctity.y = Mathf.Sqrt(Attributes.JumpHeight * -2 * Gravity); 
             Jump = false;
         }
 

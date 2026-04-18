@@ -11,6 +11,8 @@ public class ProjectileFire : MonoBehaviour
 
     public float BulletTime = 10f;
 
+    public float BulletDmg = 1f; 
+
 
     public float BulletSpeed = 50f;
 
@@ -50,7 +52,9 @@ public class ProjectileFire : MonoBehaviour
     {
         var bulletobj = Instantiate(BulletPrefab, FirePos.position, BulletPrefab.transform.rotation); 
         Destroy(bulletobj, BulletTime);
-        bulletobj.GetComponent<Bullet>().Parent = gameObject; 
+        var bull = bulletobj.GetComponent<Bullet>();
+        bull.Parent = gameObject;
+        bull.Damage = BulletDmg; 
         bulletobj.GetComponent<Rigidbody>().AddForce(
             (target - bulletobj.transform.position).normalized * BulletSpeed, ForceMode.Impulse);
 

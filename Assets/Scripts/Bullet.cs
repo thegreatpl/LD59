@@ -4,8 +4,9 @@ using UnityEngine.Diagnostics;
 public class Bullet : MonoBehaviour
 {
 
-    public GameObject Parent; 
+    public GameObject Parent;
 
+    public float Damage; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +28,12 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject != Parent)
         {
             Destroy(gameObject);
+
+            var attri = collision.gameObject.GetComponent<Attributes>();
+            if (attri != null) 
+            {
+               attri.TakeDamage(Damage); 
+            }
         }
     }
 }
