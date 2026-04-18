@@ -24,4 +24,10 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+
+    public Camera GetCurrentCamera()
+    {
+        return Camera.main;
+    }
 }
