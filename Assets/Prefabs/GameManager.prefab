@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6878182794130867728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2963277178730854485}
+  - component: {fileID: 2844779615695372869}
+  - component: {fileID: 5085205337916423838}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2963277178730854485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878182794130867728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.08258, y: -0, z: -5.32051}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2844779615695372869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878182794130867728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5cbad5075caa24eacdc738bddacdf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  MapSpriteMatrix: {fileID: 5085205337916423838}
+--- !u!114 &5085205337916423838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878182794130867728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc4029ed46642248ab52d81e555bc39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spriteMatrices:
+  - FloorSprite: {fileID: -642943284, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: 1328990954, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: -809305531, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: -1743110843, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: -1674236250, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: 79983328, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: -1207113882, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: 1857542142, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: 1824921640, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: -1042150551, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
