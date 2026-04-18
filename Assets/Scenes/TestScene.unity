@@ -2914,6 +2914,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5085205337916423838, guid: d14a70760c713bb46a9f6126237609aa, type: 3}
+      propertyPath: MapPrefabs.Array.data[0].Prefab
+      value: 
+      objectReference: {fileID: 1606123168}
     - target: {fileID: 6878182794130867728, guid: d14a70760c713bb46a9f6126237609aa, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -7988,6 +7992,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c766e2453747fb94aaff738a5b17a710, type: 3}
+--- !u!1 &1606123168 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2294868052236161873, guid: 94846131e0341cd4192994c391374e19, type: 3}
+  m_PrefabInstance: {fileID: 510087733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1610103919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11829,6 +11838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   GameManager: {fileID: 1957873911}
   Tilemap: {fileID: 1168107330508815486}
+  Utility: {fileID: 0}
   MapObjects: {fileID: 1041208329496288908}
   FloorPrefab: {fileID: 7687559999866479161, guid: c766e2453747fb94aaff738a5b17a710, type: 3}
   WallXPrefab: {fileID: 5555690273952494048, guid: e9e9c4652f40b704098c9c8d7ebab9c2, type: 3}

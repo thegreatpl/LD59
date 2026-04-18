@@ -7,6 +7,9 @@ public class MapSpriteMatrix : MonoBehaviour
 
     public List<SpriteMatrix> spriteMatrices = new List<SpriteMatrix>();
 
+
+    public List<MapPrefabs> MapPrefabs = new List<MapPrefabs>();
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,5 +26,10 @@ public class MapSpriteMatrix : MonoBehaviour
     public SpriteMatrix GetSpriteMatrix(string spriteName)
     {
         return spriteMatrices.FirstOrDefault(x => x.Name == spriteName);
+    }
+
+    public GameObject GetPrefab(string spriteName)
+    {
+        return MapPrefabs.FirstOrDefault(x => x.Name == spriteName)?.Prefab;
     }
 }

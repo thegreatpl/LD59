@@ -106,6 +106,9 @@ MonoBehaviour:
     WallSprites:
     - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
     - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  MapPrefabs:
+  - UtilitySprite: {fileID: 585006212, guid: 940023eeee4561045bcaa60b90ce416b, type: 3}
+    Prefab: {fileID: 2294868052236161873, guid: 94846131e0341cd4192994c391374e19, type: 3}
 --- !u!114 &6807260527630632431
 MonoBehaviour:
   m_ObjectHideFlags: 0

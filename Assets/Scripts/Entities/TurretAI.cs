@@ -37,7 +37,8 @@ public class TurretAI : BaseAI
                       where Vector3.Distance(transform.position, t.gameObject.transform.position) < Attributes.MaxSightDistance
                       && CanSee(t.gameObject) 
                       orderby Vector3.Distance(transform.position, t.gameObject.transform.position) ascending
-                      select t).FirstOrDefault()?.gameObject; 
+                      select t).FirstOrDefault()?.gameObject;
+            Animator.SetFloat("IsAttacking", 1);
         }
     }
 }

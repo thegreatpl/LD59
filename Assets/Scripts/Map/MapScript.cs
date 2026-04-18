@@ -8,6 +8,8 @@ public class MapScript : MonoBehaviour
 
     public Tilemap Tilemap;
 
+    public Tilemap Utility; 
+
     public GameObject MapObjects; 
 
     public GameObject FloorPrefab;
@@ -27,7 +29,9 @@ public class MapScript : MonoBehaviour
     {
         GameManager = GameManager.Instance;
 
-        Tilemap.GetComponent<TilemapRenderer>().enabled = false; 
+        Tilemap.GetComponent<TilemapRenderer>().enabled = false;
+        Utility.GetComponent<TilemapRenderer>().enabled=false;
+        InitialiseMap(); 
     }
 
     // Update is called once per frame
@@ -53,5 +57,30 @@ public class MapScript : MonoBehaviour
         if (matrix == null || matrix.WallSprites.Length <= height)
             return null;
         return matrix.WallSprites[height];  
+    }
+
+
+    public void InitialiseMap()
+    {
+        var bounds = Utility.cellBounds;
+
+        for (int xdx = bounds.xMin; xdx < bounds.xMax; xdx++)
+        {
+            for (int ydx = bounds.yMin; ydx < bounds.yMax; ydx++)
+            {
+                var vector = new Vector3Int(xdx, ydx);
+                if (Utility.GetTile(vector)!= null)
+                {
+                    var sprite = Utility.GetSprite(vector);
+                    var obj = GameManager.MapSpriteMatrix.GetPrefab(sprite.name);
+
+                    if (obj != null)
+                    {
+                        var worldpos = Utility.CellToWorld(vector); 
+                        Instantiate(obj, new Vector3(worldpos.x, worldpos.y + 1, worldpos.z), obj.transform.rotation);
+                    }
+                }
+            }
+        }
     }
 }
