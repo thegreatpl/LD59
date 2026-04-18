@@ -16,9 +16,9 @@ public class EditorMapScripts : MonoBehaviour
 
         var gameManager = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/GameManager.prefab");
         var gm = PrefabUtility.InstantiatePrefab(gameManager) as GameObject;
-        localmap.GetComponent<MapScript>().GameManager = gm.GetComponent<GameManager>(); 
+        localmap.GetComponent<MapScript>().GameManager = gm.GetComponent<GameManager>();
 
-
+        SetFogSetting(); 
     }
 
 
@@ -117,6 +117,10 @@ public class EditorMapScripts : MonoBehaviour
     static void SetFogSetting()
     {
         //insert the fog stuff here if need be. 
+
+        RenderSettings.fog = true;
+        RenderSettings.fogDensity = 0.05f;
+        RenderSettings.fogColor = Color.black;
     }
 
 }
