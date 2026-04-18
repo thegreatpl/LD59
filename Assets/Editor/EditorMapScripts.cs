@@ -112,6 +112,36 @@ public class EditorMapScripts : MonoBehaviour
         }
     }
 
+    [MenuItem("Level/GenerateEntities")]
+    static void GenerateEntities()
+    {
+        //might need some sort of delete here?
+
+
+        var editorMap = SceneAsset.FindAnyObjectByType<MapScript>();
+        var bounds = editorMap.Utility.cellBounds;
+
+        for (int xdx = bounds.xMin; xdx < bounds.xMax; xdx++)
+        {
+            for (int ydx = bounds.yMin; ydx < bounds.yMax; ydx++)
+            {
+                var vector = new Vector3Int(xdx, ydx);
+                if (editorMap.Utility.GetTile(vector) != null)
+                {
+                    var sprite = editorMap.Utility.GetSprite(vector);
+                    var obj = editorMap.GameManager.MapSpriteMatrix.GetPrefab(sprite.name);
+
+                    if (obj != null)
+                    {
+                        var worldpos = editorMap.Utility.CellToWorld(vector);
+                        var newobj = PrefabUtility.InstantiatePrefab(obj) as GameObject;
+                        newobj.transform.position = new Vector3(worldpos.x, worldpos.y + 1, worldpos.z);
+                    }
+                }
+            }
+        }
+    }
+
 
 
     static void SetFogSetting()

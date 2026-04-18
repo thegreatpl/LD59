@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,5 +36,22 @@ public class GameManager : MonoBehaviour
     public Camera GetCurrentCamera()
     {
         return Camera.main;
+    }
+
+
+
+    public void LoadLevel(string levelname, string startpos)
+    {
+        StartCoroutine(LoadLevelCo(levelname, startpos)); 
+    }
+
+
+    IEnumerator LoadLevelCo(string levelname, string startpos)
+    {
+        SceneManager.LoadScene(levelname, LoadSceneMode.Single); 
+        yield return null;
+        var currentMap = FindAnyObjectByType<MapScript>(FindObjectsInactive.Include);
+        yield return null;
+        //set player location here. 
     }
 }

@@ -31,7 +31,7 @@ public class MapScript : MonoBehaviour
 
         Tilemap.GetComponent<TilemapRenderer>().enabled = false;
         Utility.GetComponent<TilemapRenderer>().enabled=false;
-        InitialiseMap(); 
+        //InitialiseMap(); 
     }
 
     // Update is called once per frame
