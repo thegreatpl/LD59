@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 11698743238209591, guid: 3a921b66decf2c2468b04b163543f859, type: 3}
+      propertyPath: MaxHP
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11698743238209591, guid: 3a921b66decf2c2468b04b163543f859, type: 3}
       propertyPath: Faction
       value: eyes
       objectReference: {fileID: 0}
@@ -89,3 +93,4 @@ MonoBehaviour:
   Attributes: {fileID: 0}
   Gun: {fileID: 0}
   Target: {fileID: 0}
+  Animator: {fileID: 0}

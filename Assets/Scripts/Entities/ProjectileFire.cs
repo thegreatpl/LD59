@@ -44,13 +44,17 @@ public class ProjectileFire : MonoBehaviour
     }
 
 
-
     public bool Fire()
+    {
+        return Fire(transform.forward); 
+    }
+
+    public bool Fire(Vector3 Foreward)
     {
         if (FireCooldown > 0)
             return false; 
 
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, Foreward);
         RaycastHit hit;
         Vector3 target; 
         
