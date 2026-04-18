@@ -1,3 +1,4 @@
+using TreeEditor;
 using UnityEngine;
 
 public class SpriteBillboard : MonoBehaviour
@@ -21,7 +22,7 @@ public class SpriteBillboard : MonoBehaviour
         if (cam == null )
             return;
 
-        transform.rotation = Quaternion.Euler(0f,cam.transform.rotation.eulerAngles.y, 0f);
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x,cam.transform.rotation.eulerAngles.y, transform.eulerAngles.z);
 
     }
 }
