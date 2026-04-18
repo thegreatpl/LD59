@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -21,6 +22,10 @@ public class MapScript : MonoBehaviour
     public GameObject CeilingPrefab; 
 
     public int WallHeight = 2; 
+
+
+
+    public List<WaypointScript> Waypoints = new List<WaypointScript>();
 
    
 

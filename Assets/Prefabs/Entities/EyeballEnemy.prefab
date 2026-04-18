@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642c767e725aa8446ae76f183912301d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Attributes
-  MaxHP: 10
+  MaxHP: 2
   CurrentHp: 0
   Speed: 12
   JumpHeight: 3

@@ -136,6 +136,9 @@ public class EditorMapScripts : MonoBehaviour
                         var worldpos = editorMap.Utility.CellToWorld(vector);
                         var newobj = PrefabUtility.InstantiatePrefab(obj) as GameObject;
                         newobj.transform.position = new Vector3(worldpos.x, worldpos.y + 1, worldpos.z);
+
+                        var mapobj = newobj.GetComponent<BaseMapObject>();
+                        mapobj?.RegisterMapObject(editorMap); 
                     }
                 }
             }
