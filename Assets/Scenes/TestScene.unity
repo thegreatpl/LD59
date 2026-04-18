@@ -2432,6 +2432,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9e9c4652f40b704098c9c8d7ebab9c2, type: 3}
+--- !u!1001 &510087733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.9184564
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940497162877778228, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294868052236161873, guid: 94846131e0341cd4192994c391374e19, type: 3}
+      propertyPath: m_Name
+      value: EyeballEnemyTurret
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 94846131e0341cd4192994c391374e19, type: 3}
 --- !u!4 &511313756 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1392062128251790872, guid: c766e2453747fb94aaff738a5b17a710, type: 3}
@@ -11860,3 +11917,4 @@ SceneRoots:
   - {fileID: 835324966}
   - {fileID: 5651497567175450408}
   - {fileID: 837235620788648615}
+  - {fileID: 510087733}

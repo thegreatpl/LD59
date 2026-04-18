@@ -1,12 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Attributes))]
 public class ProjectileFire : MonoBehaviour
 {
 
     public GameObject BulletPrefab;
 
     public Transform FirePos;
+
+    public Attributes Attributes;
 
 
     public float BulletTime = 10f;
@@ -16,26 +19,37 @@ public class ProjectileFire : MonoBehaviour
 
     public float BulletSpeed = 50f;
 
+    public int FireRate = 10;
 
-    InputAction FireB; 
+    public int FireCooldown = 0;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        FireB = InputSystem.actions.FindAction("Attack");
+
+        Attributes = GetComponent<Attributes>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (FireB.WasPressedThisFrame())
-            Fire(); 
+        
+
+        if (FireCooldown > 0)
+        {
+            FireCooldown--;
+        }
     }
 
 
 
-    public void Fire()
+    public bool Fire()
     {
+        if (FireCooldown > 0)
+            return false; 
+
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
         Vector3 target; 
@@ -46,6 +60,9 @@ public class ProjectileFire : MonoBehaviour
             target = ray.GetPoint(1000);
 
         CreateProjectile(target);
+
+        FireCooldown = FireRate; 
+        return true;
     }
 
     void CreateProjectile(Vector3 target)

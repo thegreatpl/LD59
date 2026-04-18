@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 4566044423777865988}
   - component: {fileID: 4726314861970711449}
   - component: {fileID: 4443948146906596107}
+  - component: {fileID: 123366700941600521}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -317,8 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementController
   CharacterController: {fileID: 0}
-  Speed: 12
-  JumpHeight: 3
+  Attributes: {fileID: 0}
   Movement: {x: 0, y: 0}
   Jump: 0
   Gravity: -9.18
@@ -340,6 +340,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   MovementController: {fileID: 0}
+--- !u!114 &123366700941600521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6421449339363162345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642c767e725aa8446ae76f183912301d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attributes
+  MaxHP: 10
+  CurrentHp: 0
+  Speed: 12
+  JumpHeight: 3
+  MaxSightDistance: 50
+  Faction: player
 --- !u!1 &7083464803080185841
 GameObject:
   m_ObjectHideFlags: 0

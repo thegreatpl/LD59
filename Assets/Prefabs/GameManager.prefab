@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2963277178730854485}
   - component: {fileID: 2844779615695372869}
   - component: {fileID: 5085205337916423838}
+  - component: {fileID: 6807260527630632431}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   MapSpriteMatrix: {fileID: 5085205337916423838}
+  EntityController: {fileID: 6807260527630632431}
 --- !u!114 &5085205337916423838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,3 +106,16 @@ MonoBehaviour:
     WallSprites:
     - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
     - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+--- !u!114 &6807260527630632431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6878182794130867728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539c0d83ce6ddd344b95eb3e6958c18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityController
+  Entities: []

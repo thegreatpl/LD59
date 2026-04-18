@@ -11,7 +11,18 @@ public class Attributes : MonoBehaviour
 
     public float Speed = 12f;
 
-    public float JumpHeight = 3f; 
+    public float JumpHeight = 3f;
+
+
+    public float MaxSightDistance = 50f;
+
+
+    public string Faction;
+
+
+
+
+    private bool init = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,14 +30,24 @@ public class Attributes : MonoBehaviour
         CurrentHp = MaxHP; 
     }
 
+
     // Update is called once per frame
     void Update()
     {
+        if (!init)
+        {
+            GameManager.Instance.EntityController.RegisterEntity(this);
+            init = true;
+        }
+
+
         if (CurrentHp < 0)
         {
             //need to handle the player death better here. 
             Destroy(gameObject);
         }
+
+       
     }
 
 

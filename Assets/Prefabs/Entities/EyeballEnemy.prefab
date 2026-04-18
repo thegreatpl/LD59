@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 2856227166037811750}
   - component: {fileID: 6180839192450412619}
   - component: {fileID: 3514172582759734399}
+  - component: {fileID: 11698743238209591}
   m_Layer: 0
   m_Name: EyeballEnemy
   m_TagString: Untagged
@@ -281,8 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MovementController
   CharacterController: {fileID: 2856227166037811750}
-  Speed: 12
-  JumpHeight: 3
+  Attributes: {fileID: 0}
   Movement: {x: 0, y: 0}
   Jump: 0
   Gravity: -9.18
@@ -305,5 +305,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileFire
   BulletPrefab: {fileID: 6389453408989361324, guid: ab4da1014ce708c40aad53bf638a3475, type: 3}
   FirePos: {fileID: 5370031299585932872}
+  Attributes: {fileID: 0}
   BulletTime: 10
+  BulletDmg: 1
   BulletSpeed: 25
+  FireRate: 50
+  FireCooldown: 0
+--- !u!114 &11698743238209591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5443690718945441198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642c767e725aa8446ae76f183912301d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Attributes
+  MaxHP: 10
+  CurrentHp: 0
+  Speed: 12
+  JumpHeight: 3
+  MaxSightDistance: 50
+  Faction: 

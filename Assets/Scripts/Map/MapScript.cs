@@ -25,7 +25,9 @@ public class MapScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameManager = GameManager.Instance; 
+        GameManager = GameManager.Instance;
+
+        Tilemap.GetComponent<TilemapRenderer>().enabled = false; 
     }
 
     // Update is called once per frame

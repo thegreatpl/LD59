@@ -75,10 +75,7 @@ public class SpriteDirectionController : MonoBehaviour
         Animator.SetFloat("MoveX", animationDirection.x);
         Animator.SetFloat("MoveY", animationDirection.y);
 
-        if (tempTest.IsPressed())
-            Animator.SetFloat("IsAttacking", 0);
-        else
-            Animator.SetFloat("IsAttacking", 1); 
+       
 
     }
 }
