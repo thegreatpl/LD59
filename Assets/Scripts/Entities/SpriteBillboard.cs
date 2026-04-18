@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class SpriteBillboard : MonoBehaviour
 {
+    //based on this: https://www.youtube.com/watch?v=FjJJ_I9zqJo&t=5s
+    //because I know I'll be here later to figure out how I did this. 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

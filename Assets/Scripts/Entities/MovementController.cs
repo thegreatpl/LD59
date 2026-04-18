@@ -7,6 +7,8 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(Attributes))]
 public class MovementController : MonoBehaviour
 {
+    //first person controller tutorial: https://www.youtube.com/watch?v=_QajrabyTJc
+
 
     public CharacterController CharacterController;
 

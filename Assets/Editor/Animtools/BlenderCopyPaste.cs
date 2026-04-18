@@ -3,6 +3,8 @@ using TMPro;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
+
+//https://discussions.unity.com/t/mecanim-blend-trees-copy-and-paste/503492/23
 public class BlendTreeCopyPaste : MonoBehaviour
 {
     const string workDir = "Assets/Editor/AnimTools/BlendTreeCopyPaste/";
