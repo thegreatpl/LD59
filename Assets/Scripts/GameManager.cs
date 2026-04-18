@@ -9,7 +9,10 @@ public class GameManager : MonoBehaviour
 
     public MapSpriteMatrix MapSpriteMatrix;
 
-    public EntityController EntityController; 
+    public EntityController EntityController;
+
+
+    public MapScript CurrentMap; 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -50,7 +53,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(levelname, LoadSceneMode.Single); 
         yield return null;
-        var currentMap = FindAnyObjectByType<MapScript>(FindObjectsInactive.Include);
+        CurrentMap = FindAnyObjectByType<MapScript>(FindObjectsInactive.Include);
         yield return null;
         //set player location here. 
     }

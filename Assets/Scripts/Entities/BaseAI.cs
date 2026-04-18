@@ -60,4 +60,9 @@ public class BaseAI : MonoBehaviour
         }
         return false;
     }
+
+    protected bool AnythingInTheWay(Vector3 location)
+    {
+        return !Physics.Linecast(transform.position, location); 
+    }
 }

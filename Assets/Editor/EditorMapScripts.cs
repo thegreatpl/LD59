@@ -16,7 +16,9 @@ public class EditorMapScripts : MonoBehaviour
 
         var gameManager = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/Prefabs/GameManager.prefab");
         var gm = PrefabUtility.InstantiatePrefab(gameManager) as GameObject;
-        localmap.GetComponent<MapScript>().GameManager = gm.GetComponent<GameManager>();
+        var gms = gm.GetComponent<GameManager>();
+        localmap.GetComponent<MapScript>().GameManager = gms;
+        gms.CurrentMap = localmap.GetComponent<MapScript>(); 
 
         SetFogSetting(); 
     }
@@ -119,6 +121,8 @@ public class EditorMapScripts : MonoBehaviour
 
 
         var editorMap = SceneAsset.FindAnyObjectByType<MapScript>();
+        editorMap.Waypoints.Clear();
+
         var bounds = editorMap.Utility.cellBounds;
 
         for (int xdx = bounds.xMin; xdx < bounds.xMax; xdx++)

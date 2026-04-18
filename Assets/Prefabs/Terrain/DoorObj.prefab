@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   LeftDoor: {fileID: 784601556651567416}
   RightDoor: {fileID: 7587358609350094693}
-  DoorMovement: 0.1
+  DoorMovement: 0.2
   OpenDoor: 0
   TileSize: 2
 --- !u!65 &7546661991729899942

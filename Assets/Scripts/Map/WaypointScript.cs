@@ -32,8 +32,11 @@ public class WaypointScript : BaseMapObject
         Neighbours.Clear();
         foreach(var waypoint in map.Waypoints)
         {
+            if (waypoint == this)
+                continue; 
+
             RaycastHit hit;
-            if (!Physics.Raycast(transform.position, waypoint.transform.position - transform.position, out  hit))
+            if (!Physics.Linecast(transform.position, waypoint.transform.position, out  hit, 1 << 9))
             {
                 Neighbours.Add(waypoint);
             }
