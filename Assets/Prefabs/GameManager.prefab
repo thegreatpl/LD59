@@ -168,6 +168,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   PlayerPrefab: {fileID: 6421449339363162345, guid: 26503398cc148cb48927f581d2aedee9, type: 3}
+  GibsPrefabs:
+  - {fileID: 239472906671638904, guid: a72e1bdeb8595374196c93a874ab1c65, type: 3}
+  - {fileID: 2016272616416010232, guid: ca4848a556aafc0459ac1d738d9cc769, type: 3}
+  - {fileID: 7029875661704782316, guid: ce377ee7ce6231a4fb22f7ba932310aa, type: 3}
   MapSpriteMatrix: {fileID: 5085205337916423838}
   EntityController: {fileID: 6807260527630632431}
   CurrentMap: {fileID: 0}

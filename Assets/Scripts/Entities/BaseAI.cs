@@ -22,6 +22,11 @@ public class BaseAI : MonoBehaviour
         Attributes = GetComponent<Attributes>();
         Attributes.OnDeath += () =>
         {
+            for (int idx = 0; idx < Random.Range(2, 5); idx++)
+            {
+                Instantiate(GameManager.Instance.GibsPrefabs.RandomElement(), transform.position, Quaternion.identity); 
+            }
+
             Destroy(gameObject);
         }; 
     }

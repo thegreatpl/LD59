@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,7 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    public GameObject PlayerPrefab; 
+    public GameObject PlayerPrefab;
+
+    public List<GameObject> GibsPrefabs; 
 
 
 
