@@ -31,6 +31,8 @@ public class WanderingWaypointAI : BaseAI
             else
                 Animator.SetFloat("IsAttacking", 1);
 
+            Movement.Movement = Vector2.zero; //make sure the enemy doesn't move. 
+
         }
         else
         {

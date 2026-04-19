@@ -46,7 +46,7 @@ public class Attributes : MonoBehaviour
         }
 
 
-        if (CurrentHp < 0)
+        if (CurrentHp <= 0)
         {
             //need to handle the player death better here. 
             OnDeath?.Invoke(); 
