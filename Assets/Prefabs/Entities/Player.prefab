@@ -414,7 +414,7 @@ MonoBehaviour:
   BulletTime: 10
   BulletDmg: 1
   BulletSpeed: 50
-  FireRate: 10
+  FireRate: 5
   FireCooldown: 0
   HasGun: 1
 --- !u!1 &7083464803080185841

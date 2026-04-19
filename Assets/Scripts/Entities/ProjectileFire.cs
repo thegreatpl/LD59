@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -34,6 +35,7 @@ public class ProjectileFire : MonoBehaviour
     {
 
         Attributes = GetComponent<Attributes>();
+        StartCoroutine(Cooldown()); 
     }
 
     // Update is called once per frame
@@ -41,10 +43,10 @@ public class ProjectileFire : MonoBehaviour
     {
         
 
-        if (FireCooldown > 0)
-        {
-            FireCooldown--;
-        }
+        //if (FireCooldown > 0)
+        //{
+        //    FireCooldown--;
+        //}
     }
 
 
@@ -83,5 +85,21 @@ public class ProjectileFire : MonoBehaviour
         bulletobj.GetComponent<Rigidbody>().AddForce(
             (target - bulletobj.transform.position).normalized * BulletSpeed, ForceMode.Impulse);
 
+    }
+
+
+    IEnumerator Cooldown()
+    {
+        var ratefiresecs = FireRate * 0.01f; 
+        while(true)
+        {
+            if (FireCooldown > 0)
+            {
+                yield return new WaitForSeconds(ratefiresecs);
+                FireCooldown = 0; 
+            }
+
+            yield return null;
+        }
     }
 }
