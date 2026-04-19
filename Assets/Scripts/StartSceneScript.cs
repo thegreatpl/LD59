@@ -34,6 +34,9 @@ public class StartSceneScript : MonoBehaviour
     {
         
         yield return null;
+        yield return null;
+        yield return null; 
+        yield return null; //need to wait for the scene load code to finish before we turn on the black screen. 
         var UI = GameManager.Instance.UI;       
         UI.ShowBlackPanel(true); 
 
