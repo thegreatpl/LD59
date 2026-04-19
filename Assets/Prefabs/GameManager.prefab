@@ -284,6 +284,8 @@ MonoBehaviour:
     Prefab: {fileID: 4747662991997177736, guid: 745af0c3d34c9c141bcdee3b1393f268, type: 3}
   - UtilitySprite: {fileID: 917241734, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
     Prefab: {fileID: 5080861937305465709, guid: 7bce7704de092d84397cf9b180be0744, type: 3}
+  - UtilitySprite: {fileID: 21300000, guid: a21755e7a38984e42a734241f15bbe55, type: 3}
+    Prefab: {fileID: 1864234974880447688, guid: d79daff1c3bda4d40935617bd6e934a3, type: 3}
 --- !u!114 &6807260527630632431
 MonoBehaviour:
   m_ObjectHideFlags: 0
