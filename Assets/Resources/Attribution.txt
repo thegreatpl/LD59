@@ -148,4 +148,9 @@ Free License
 https://opengameart.org/content/medkit-0
 knik1985
 
+--Gibs
+https://opengameart.org/content/lpc-zombiehttps://opengameart.org/content/lpc-zombie
+Copyright/Attribution Notice: 
+"[LPC] Zombie" by Benjamin K. Smith, commissioned by castelonia. Based on the male LPC base by Stephen Challener (Redshrike) and the thrust and shoot animations by Johannes Sjölund (wulax).
+
 
