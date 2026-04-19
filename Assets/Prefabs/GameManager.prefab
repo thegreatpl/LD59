@@ -176,6 +176,7 @@ MonoBehaviour:
   Music:
   - {fileID: 8300000, guid: 508407ff4e64233469968ad3c8923afe, type: 3}
   - {fileID: 8300000, guid: f477929150369fd48879a6041137c9b4, type: 3}
+  - {fileID: 8300000, guid: 0c1aa3ce14b00f34e83b46074bd58c64, type: 3}
   MapSpriteMatrix: {fileID: 5085205337916423838}
   EntityController: {fileID: 6807260527630632431}
   CurrentMap: {fileID: 0}
