@@ -32,21 +32,45 @@ public class StartSceneScript : MonoBehaviour
 
     IEnumerator RunCutscene()
     {
+        
         yield return null;
+        var UI = GameManager.Instance.UI;       
+        UI.ShowBlackPanel(true); 
+
         yield return null;
         var Playerobj = GameManager.Instance.Player.GetComponent<PlayerController>();
         Playerobj.LockControls = true;
 
-        yield return null; 
+        yield return null;
 
         //do plot stuff here. 
-
+        UI.ShowSpeech("Richard: \n What do you think we'll find?");
+        yield return new WaitUntil(() => NextSpeech.WasPressedThisFrame());
+        UI.ShowSpeech("You: \n I have no idea");
         yield return null;
+        yield return new WaitUntil(() => NextSpeech.WasPressedThisFrame());
+        UI.ShowSpeech("Richard: \n Dude, you're not even curious? It's a mysterious signal on the moon. It could be anything. It could be aliens. It might even be Doom or something.");
+        yield return null;
+        yield return new WaitUntil(() => NextSpeech.WasPressedThisFrame());
+        UI.ShowSpeech("You: \n I hope it's not Doom. I'm an astronaught, not a soldier. I can't hit the broadside of a barn.");
+        yield return null;
+        yield return new WaitUntil(()=> NextSpeech.WasPressedThisFrame());
+        UI.ShowSpeech("Commander James: \n It's probably something natural. Or someone's probe got malfunctioning. Now, get ready for landing");
+        yield return null;
+        yield return new WaitUntil(() => NextSpeech.WasPressedThisFrame());
+
+        UI.ShowBlackPanel(false); 
         Playerobj.transform.LookAt(transform.position);
-
-        yield return new WaitForSeconds(5f); 
-
+        UI.ShowSpeech("Richard: \n That's a door! A door on the moon!");
         yield return null;
+        yield return new WaitUntil(() => NextSpeech.WasPressedThisFrame());
+        Playerobj.transform.LookAt(transform.position);
+        UI.ShowSpeech("Commander James: \n Stay sharp!");
+        yield return null;
+        yield return new WaitUntil(() => NextSpeech.WasPressedThisFrame());
+        Playerobj.transform.LookAt(transform.position);
+        UI.ShowSpeech("You: \n Let me just... AAARG!"); 
+
         while (true)
         {
             Playerobj.transform.LookAt(transform.position);

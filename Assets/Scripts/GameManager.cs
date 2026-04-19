@@ -19,7 +19,9 @@ public class GameManager : MonoBehaviour
     public MapScript CurrentMap;
 
 
-    public GameObject Player; 
+    public GameObject Player;
+
+    public UIScript UI; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -78,5 +80,8 @@ public class GameManager : MonoBehaviour
         Player.transform.position = CurrentMap.PlayerSpawnLoc(startpos);
         Player.GetComponent<PlayerController>().LockControls = false; //make sure the controls are not locked!
         //set player location here. 
+        yield return null;
+        UI.ShowSpeechPanel(false);
+        UI.ShowBlackPanel(false);
     }
 }
