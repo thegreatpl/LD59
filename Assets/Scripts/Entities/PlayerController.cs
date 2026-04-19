@@ -25,7 +25,12 @@ public class PlayerController : MonoBehaviour
         ProjectileFire = GetComponent<ProjectileFire>(); 
         Move = InputSystem.actions.FindAction("Move");
         Jump = InputSystem.actions.FindAction("Jump");
-        Fire = InputSystem.actions.FindAction("Attack"); 
+        Fire = InputSystem.actions.FindAction("Attack");
+
+        GetComponent<Attributes>().OnDeath += () =>
+        {
+            GameManager.Instance.GameOver(); 
+        }; 
     }
 
     // Update is called once per frame

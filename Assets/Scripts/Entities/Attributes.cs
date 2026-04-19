@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 
 
+public delegate void OnDeath(); 
+
 public class Attributes : MonoBehaviour
 {
 
@@ -20,9 +22,12 @@ public class Attributes : MonoBehaviour
     public string Faction;
 
 
-
+    public OnDeath OnDeath;
 
     private bool init = false;
+
+
+    public bool Immune = false; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -44,7 +49,7 @@ public class Attributes : MonoBehaviour
         if (CurrentHp < 0)
         {
             //need to handle the player death better here. 
-            Destroy(gameObject);
+            OnDeath?.Invoke(); 
         }
 
        
@@ -52,7 +57,8 @@ public class Attributes : MonoBehaviour
 
 
     public void TakeDamage(float damage)
-    {
-        CurrentHp -= damage;
+    { 
+        if (!Immune) 
+            CurrentHp -= damage;
     }
 }

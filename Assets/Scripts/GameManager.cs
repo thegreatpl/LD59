@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
         yield return null;
         var attributes = Player.GetComponent<Attributes>();
         attributes.CurrentHp = attributes.MaxHP;
+        attributes.Immune = false; //turn off immunity. 
 
         Player.GetComponent<ProjectileFire>().HasGun = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -108,5 +109,26 @@ public class GameManager : MonoBehaviour
         yield return null;
         UI.ShowSpeechPanel(false);
         UI.ShowBlackPanel(false);
+    }
+
+
+    public void GameOver()
+    {       
+
+        StartCoroutine(GameOverCo());
+    }
+
+    IEnumerator GameOverCo()
+    {
+        var playerattri = Player.GetComponent<Attributes>();
+        playerattri.CurrentHp = 1; //make sure we're not going to be constantly triggering this. 
+        playerattri.Immune = true;
+
+        UI.ShowBlackPanel(true); 
+        UI.ShowSpeech("YOU DIE!");
+        yield return new WaitForSeconds(5f);
+        yield return LoadLevelCo("MainMenu", "Alpha"); 
+        
+
     }
 }

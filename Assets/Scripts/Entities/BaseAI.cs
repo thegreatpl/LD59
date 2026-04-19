@@ -20,6 +20,10 @@ public class BaseAI : MonoBehaviour
     {
         Movement = GetComponent<MovementController>();
         Attributes = GetComponent<Attributes>();
+        Attributes.OnDeath += () =>
+        {
+            Destroy(gameObject);
+        }; 
     }
 
     // Update is called once per frame
