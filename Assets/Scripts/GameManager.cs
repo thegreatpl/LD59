@@ -143,6 +143,20 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public void Victory()
+    {
+        StartCoroutine (VictoryCo());
+    }
+
+    IEnumerator VictoryCo()
+    {
+        UI.ShowBlackPanel(true);
+        UI.ShowSpeech("You have escaped... for now.");
+        yield return new WaitForSeconds(5f);
+        yield return LoadLevelCo("MainMenu", "Alpha");
+    }
+
+
 
     public void SetMusic(string song)
     {
