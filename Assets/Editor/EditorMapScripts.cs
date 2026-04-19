@@ -172,6 +172,7 @@ public class EditorMapScripts : MonoBehaviour
 
     }
 
+
     static void SetFogSetting()
     {
         //insert the fog stuff here if need be. 

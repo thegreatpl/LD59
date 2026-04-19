@@ -69,6 +69,8 @@ MonoBehaviour:
   WallZPrefab: {fileID: 4961749845541258601, guid: 22e92ccc1780d7943897356b0009f8a7, type: 3}
   CeilingPrefab: {fileID: 7687559999866479161, guid: c766e2453747fb94aaff738a5b17a710, type: 3}
   WallHeight: 2
+  Waypoints: []
+  Startpositions: []
 --- !u!1 &1788662041689469606
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +124,7 @@ Tilemap:
   m_Origin: {x: 0, y: 0, z: 0}
   m_Size: {x: 0, y: 0, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
-  m_TileOrientation: 0
+  m_TileOrientation: 1
   m_TileOrientationMatrix:
     e00: 1
     e01: 0

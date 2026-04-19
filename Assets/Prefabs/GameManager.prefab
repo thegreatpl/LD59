@@ -247,6 +247,26 @@ MonoBehaviour:
     - {fileID: 2013673423, guid: 929e7822e525c00459c96c623773a659, type: 3}
     - {fileID: 2013673423, guid: 929e7822e525c00459c96c623773a659, type: 3}
     - {fileID: 2013673423, guid: 929e7822e525c00459c96c623773a659, type: 3}
+  - FloorSprite: {fileID: -85211614, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: 1510259664, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: -949359679, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: 1510259664, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: -621950327, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: 1510259664, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+  - FloorSprite: {fileID: 2002351405, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    RoofSprite: {fileID: 1510259664, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    WallSprites:
+    - {fileID: -1346780063, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    - {fileID: 96309862, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
   MapPrefabs:
   - UtilitySprite: {fileID: 585006212, guid: 940023eeee4561045bcaa60b90ce416b, type: 3}
     Prefab: {fileID: 2294868052236161873, guid: 94846131e0341cd4192994c391374e19, type: 3}

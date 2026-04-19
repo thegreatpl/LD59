@@ -65,10 +65,15 @@ public class DoorScript : MonoBehaviour
                 if (LeftDoor.transform.localPosition.x < leftClosed )
                 {
                     LeftDoor.transform.localPosition += new Vector3(DoorMovement, 0);
+                    if (LeftDoor.transform.localPosition.x > leftClosed)
+                        LeftDoor.transform.localPosition = new Vector3(leftClosed, LeftDoor.transform.localPosition.y, LeftDoor.transform.localPosition.z); 
                 }
                 if (RightDoor.transform.localPosition.x > rightClosed )
                 {
                     RightDoor.transform.localPosition -= new Vector3(DoorMovement, 0);
+                    if (RightDoor.transform.localPosition.x < rightClosed)
+                        RightDoor.transform.localPosition = new Vector3(rightClosed, RightDoor.transform.localPosition.y, RightDoor.transform.localPosition.z);
+
                 }
             }
 
