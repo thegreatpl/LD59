@@ -122,6 +122,7 @@ public class EditorMapScripts : MonoBehaviour
 
         var editorMap = SceneAsset.FindAnyObjectByType<MapScript>();
         editorMap.Waypoints.Clear();
+        editorMap.Startpositions.Clear(); 
 
         var bounds = editorMap.Utility.cellBounds;
 

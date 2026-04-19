@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -26,6 +27,8 @@ public class MapScript : MonoBehaviour
 
 
     public List<WaypointScript> Waypoints = new List<WaypointScript>();
+
+    public List<Startposition> Startpositions = new List<Startposition>();
 
    
 
@@ -62,6 +65,20 @@ public class MapScript : MonoBehaviour
         if (matrix == null || matrix.WallSprites.Length <= height)
             return null;
         return matrix.WallSprites[height];  
+    }
+
+    public Vector3 PlayerSpawnLoc(string spawnlocation)
+    {
+        var normal = Startpositions.FirstOrDefault(x => x.Name == spawnlocation);
+        if (normal != null)
+        {
+            return normal.transform.position;
+        }
+        else if (Startpositions.Count > 0)
+        {
+            return Startpositions[0].transform.position;
+        }
+        return transform.position; 
     }
 
 

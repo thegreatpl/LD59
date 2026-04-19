@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,8 +13,10 @@ public class GameManager : MonoBehaviour
     public EntityController EntityController;
 
 
-    public MapScript CurrentMap; 
+    public MapScript CurrentMap;
 
+
+    public GameObject Player; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,6 +58,7 @@ public class GameManager : MonoBehaviour
         yield return null;
         CurrentMap = FindAnyObjectByType<MapScript>(FindObjectsInactive.Include);
         yield return null;
+        Player.transform.position = CurrentMap.PlayerSpawnLoc(startpos); 
         //set player location here. 
     }
 }

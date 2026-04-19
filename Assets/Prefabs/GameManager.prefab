@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   MapSpriteMatrix: {fileID: 5085205337916423838}
   EntityController: {fileID: 6807260527630632431}
+  CurrentMap: {fileID: 0}
 --- !u!114 &5085205337916423838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +118,8 @@ MonoBehaviour:
     Prefab: {fileID: 8477796377087957913, guid: 79d855fa0c50acf4b82e1492b69e461b, type: 3}
   - UtilitySprite: {fileID: 1865926785, guid: 940023eeee4561045bcaa60b90ce416b, type: 3}
     Prefab: {fileID: 4747662991997177736, guid: 745af0c3d34c9c141bcdee3b1393f268, type: 3}
+  - UtilitySprite: {fileID: 917241734, guid: b482200a6cf03fc49b21820cd5baf530, type: 3}
+    Prefab: {fileID: 5080861937305465709, guid: 7bce7704de092d84397cf9b180be0744, type: 3}
 --- !u!114 &6807260527630632431
 MonoBehaviour:
   m_ObjectHideFlags: 0
