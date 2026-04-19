@@ -1,3 +1,4 @@
+using System.Net;
 using UnityEngine;
 
 public class MedkitPickup : MonoBehaviour
@@ -23,6 +24,9 @@ public class MedkitPickup : MonoBehaviour
         var attri = other.gameObject.GetComponent<Attributes>();
         if (attri != null)
         {
+            if (attri.CurrentHp == attri.MaxHP)
+                return; 
+
             attri.CurrentHp += Health; 
             if (attri.CurrentHp > attri.MaxHP)
             {
