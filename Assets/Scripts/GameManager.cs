@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameObject PlayerPrefab; 
+
+
 
     public MapSpriteMatrix MapSpriteMatrix;
 
@@ -30,12 +33,26 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         EntityController = GetComponent<EntityController>();
+
+        if (Player == null)
+        {
+            StartCoroutine(SpawnPlayer());
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+
+    IEnumerator SpawnPlayer()
+    {
+        Player = Instantiate(PlayerPrefab);        
+        DontDestroyOnLoad(Player); 
+        yield return null;
+        Player.transform.position = CurrentMap.PlayerSpawnLoc("Alpha");
     }
 
 
@@ -58,7 +75,8 @@ public class GameManager : MonoBehaviour
         yield return null;
         CurrentMap = FindAnyObjectByType<MapScript>(FindObjectsInactive.Include);
         yield return null;
-        Player.transform.position = CurrentMap.PlayerSpawnLoc(startpos); 
+        Player.transform.position = CurrentMap.PlayerSpawnLoc(startpos);
+        Player.GetComponent<PlayerController>().LockControls = false; //make sure the controls are not locked!
         //set player location here. 
     }
 }

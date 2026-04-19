@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     public Camera Camera;
 
+    public bool LockControls = false; 
+
 
     InputAction Move;
     InputAction Jump;
@@ -29,6 +31,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (LockControls)
+            return; 
+
         Vector2 movement = Move.ReadValue<Vector2>();
         MovementController.Movement = movement;
 

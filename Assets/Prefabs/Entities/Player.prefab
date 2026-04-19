@@ -135,8 +135,8 @@ Camera:
   m_GameObject: {fileID: 1153570137871483231}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -243,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MouseLook
   MouseSensitivity: 100
   PlayerBody: {fileID: 800832429591164670}
+  PlayerController: {fileID: 4443948146906596107}
 --- !u!1 &5312521146133737733
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +376,7 @@ MonoBehaviour:
   MovementController: {fileID: 0}
   ProjectileFire: {fileID: 0}
   Camera: {fileID: 8701918407837013009}
+  LockControls: 0
 --- !u!114 &123366700941600521
 MonoBehaviour:
   m_ObjectHideFlags: 0

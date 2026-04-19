@@ -11,6 +11,8 @@ public class MouseLook : MonoBehaviour
 
     InputAction Look; 
 
+    public PlayerController PlayerController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,9 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (PlayerController != null && PlayerController.LockControls)
+            return; 
+
         var mouse = Look.ReadValue<Vector2>();
 
         float mouseX = mouse.x * MouseSensitivity * Time.deltaTime;
