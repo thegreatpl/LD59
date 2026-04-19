@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -150,7 +153,24 @@ public class EditorMapScripts : MonoBehaviour
         }
     }
 
+    [MenuItem("Level/Add all scenes to build")]
+    static void CompileScenes()
+    {
+        List<EditorBuildSettingsScene> scenes = new List<EditorBuildSettingsScene>();
 
+        var files = Directory.GetFiles("Assets/Scenes").Where(x => Path.GetExtension(x) == ".unity").ToList();
+
+        var mainmenu = files.FirstOrDefault(x => Path.GetFileName(x) == "MainMenu.unity");
+        scenes.Add(new EditorBuildSettingsScene(mainmenu, true));
+        files.Remove(mainmenu);
+
+        foreach (var file in files)
+        {
+            scenes.Add(new EditorBuildSettingsScene(file, true));
+        }
+        EditorBuildSettings.scenes = scenes.ToArray();
+
+    }
 
     static void SetFogSetting()
     {
