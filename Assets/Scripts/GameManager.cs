@@ -10,8 +10,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject PlayerPrefab;
 
-    public List<GameObject> GibsPrefabs; 
+    public List<GameObject> GibsPrefabs;
 
+    public List<AudioClip> Music; 
 
 
     public MapSpriteMatrix MapSpriteMatrix;
@@ -24,7 +25,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject Player;
 
-    public UIScript UI; 
+    public UIScript UI;
+
+    public AudioSource BackgroundMusic; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +41,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         EntityController = GetComponent<EntityController>();
+        BackgroundMusic = GetComponent<AudioSource>();
 
         if (Player == null)
         {
@@ -112,6 +116,9 @@ public class GameManager : MonoBehaviour
         yield return null;
         UI.ShowSpeechPanel(false);
         UI.ShowBlackPanel(false);
+        SetMusic(CurrentMap.Music);
+        
+
     }
 
 
@@ -134,4 +141,18 @@ public class GameManager : MonoBehaviour
         
 
     }
+
+
+
+    public void SetMusic(string song)
+    {
+        var clip = Music.FirstOrDefault(x => x.name == song);
+
+        if (clip != null)
+        {
+            BackgroundMusic.clip = clip;
+            BackgroundMusic.Play();
+        }
+    }
+
 }

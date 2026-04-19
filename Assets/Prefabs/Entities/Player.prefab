@@ -395,6 +395,7 @@ MonoBehaviour:
   JumpHeight: 3
   MaxSightDistance: 50
   Faction: player
+  Immune: 0
 --- !u!114 &6858364741194352881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,6 +416,7 @@ MonoBehaviour:
   BulletSpeed: 50
   FireRate: 10
   FireCooldown: 0
+  HasGun: 1
 --- !u!1 &7083464803080185841
 GameObject:
   m_ObjectHideFlags: 0

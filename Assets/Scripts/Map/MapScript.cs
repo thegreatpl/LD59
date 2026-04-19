@@ -22,9 +22,9 @@ public class MapScript : MonoBehaviour
 
     public GameObject CeilingPrefab; 
 
-    public int WallHeight = 2; 
+    public int WallHeight = 2;
 
-
+    public string Music = "depths_1"; 
 
     public List<WaypointScript> Waypoints = new List<WaypointScript>();
 
