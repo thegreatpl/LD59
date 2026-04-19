@@ -65,6 +65,29 @@ public class GameManager : MonoBehaviour
 
 
 
+    public void StartNewGame()
+    {
+        StartCoroutine (NewGame());
+    }
+
+    IEnumerator NewGame()
+    {
+        if (Player == null)
+        {
+            yield return SpawnPlayer(); 
+        }
+        yield return null;
+        var attributes = Player.GetComponent<Attributes>();
+        attributes.CurrentHp = attributes.MaxHP;
+
+        Player.GetComponent<ProjectileFire>().HasGun = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+        yield return LoadLevelCo("IntroScene", "Alpha"); 
+    }
+
+
+
     public void LoadLevel(string levelname, string startpos)
     {
         StartCoroutine(LoadLevelCo(levelname, startpos)); 
@@ -79,6 +102,8 @@ public class GameManager : MonoBehaviour
         yield return null;
         Player.transform.position = CurrentMap.PlayerSpawnLoc(startpos);
         Player.GetComponent<PlayerController>().LockControls = false; //make sure the controls are not locked!
+        Player.transform.rotation = Quaternion.Euler(0, 0, 0);  //reset rotation in case it got weird. 
+
         //set player location here. 
         yield return null;
         UI.ShowSpeechPanel(false);

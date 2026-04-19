@@ -25,6 +25,10 @@ public class ProjectileFire : MonoBehaviour
 
 
 
+    public bool HasGun = true; 
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -51,7 +55,7 @@ public class ProjectileFire : MonoBehaviour
 
     public bool Fire(Vector3 Foreward)
     {
-        if (FireCooldown > 0)
+        if (FireCooldown > 0 || !HasGun)
             return false; 
 
         Ray ray = new Ray(transform.position, Foreward);
