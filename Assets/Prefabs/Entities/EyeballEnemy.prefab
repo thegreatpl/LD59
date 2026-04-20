@@ -92,7 +92,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: 488cfec2c7cf9234893600064795b086, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -311,6 +311,7 @@ MonoBehaviour:
   BulletSpeed: 25
   FireRate: 50
   FireCooldown: 0
+  HasGun: 1
 --- !u!114 &11698743238209591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,3 +330,4 @@ MonoBehaviour:
   JumpHeight: 3
   MaxSightDistance: 50
   Faction: 
+  Immune: 0
