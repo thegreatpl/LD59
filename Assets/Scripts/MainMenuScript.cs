@@ -35,6 +35,7 @@ public class MainMenuScript : MonoBehaviour
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         Player = GameManager.Instance.Player.GetComponent<PlayerController>(); 
         Player.LockControls = true;
+        Slider.value = GameManager.Instance.Player.GetComponentInChildren<MouseLook>().MouseSensitivity;
         SetSliderText();
         GameManager.Instance.UI.ShowBlackPanel(false); 
         GameManager.Instance.UI.ShowSpeechPanel(false);
