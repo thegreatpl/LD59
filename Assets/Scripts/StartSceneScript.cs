@@ -43,6 +43,8 @@ public class StartSceneScript : MonoBehaviour
         yield return null;
         var Playerobj = GameManager.Instance.Player.GetComponent<PlayerController>();
         Playerobj.LockControls = true;
+        //force the camera to look where it should. 
+        GameManager.Instance.GetCurrentCamera().transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
 
         yield return null;
 

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalLevel.unity
     guid: ec39e25b668f7c946ac9712ca20731ff
   - enabled: 1
+    path: Assets/Scenes/gauntlet.unity
+    guid: f93c12b4af4f0dd42b09ee74b053f91e
+  - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: d66f493a55123d949bc58f45dc10442a
   - enabled: 1
@@ -27,8 +30,8 @@ EditorBuildSettings:
     path: Assets/Scenes/level4.unity
     guid: 68b6afe7ad52b5043b7af62789c5daf7
   - enabled: 1
-    path: Assets/Scenes/gauntlet.unity
-    guid: f93c12b4af4f0dd42b09ee74b053f91e
+    path: Assets/Scenes/level5.unity
+    guid: d9e82b7231dc3764b9a965bf87352495
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
